@@ -66,3 +66,8 @@ Specify what it takes to deploy your app.
 ### 2. Building Pages
 
 * No terminal commands
+
+### 3. Automated Testing
+
+* `ember generate acceptance-test super-rentals`
+* `ember test --server` (or `ember t -s` for short)
