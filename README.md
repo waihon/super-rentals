@@ -62,3 +62,7 @@ Specify what it takes to deploy your app.
 * `ember new super-rentals --lang en`
 * `cd super-rentals`
 * `ember server`
+
+### 2. Building Pages
+
+* No terminal commands
