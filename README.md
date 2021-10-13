@@ -71,3 +71,7 @@ Specify what it takes to deploy your app.
 
 * `ember generate acceptance-test super-rentals`
 * `ember test --server` (or `ember t -s` for short)
+
+### 4. Component Basics
+
+* `ember generate component-test jumbo`
