@@ -81,3 +81,7 @@ Specify what it takes to deploy your app.
 * `ember generate component rental`
 * `ember generate component-class rental` to add a class e.g. rental.js
 * `ember generate component rental/image`
+
+### 6. Interactive Components
+
+* `ember generate component-class rental/image`
