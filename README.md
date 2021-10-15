@@ -75,3 +75,9 @@ Specify what it takes to deploy your app.
 ### 4. Component Basics
 
 * `ember generate component-test jumbo`
+
+### 5. More About Components
+
+* `ember generate component rental`
+* `ember generate component-class rental` to add a class e.g. rental.js
+* `ember generate component rental/image`
