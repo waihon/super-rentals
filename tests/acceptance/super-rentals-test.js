@@ -19,7 +19,7 @@ module('Acceptance | super rentals', function (hooks) {
     assert.equal(currentURL(), '/about');
   });
 
-  test('visiting /about', async function(assert) {
+  test('visiting /about', async function (assert) {
     await visit('/about');
 
     assert.equal(currentURL(), '/about');
@@ -47,7 +47,7 @@ module('Acceptance | super rentals', function (hooks) {
     assert.equal(currentURL(), '/about');
   });
 
-  test('navigating using the nav-bar', async function(assert) {
+  test('navigating using the nav-bar', async function (assert) {
     await visit('/');
 
     assert.dom('nav').exists();
@@ -63,5 +63,5 @@ module('Acceptance | super rentals', function (hooks) {
 
     await click('nav a.menu-index');
     assert.equal(currentURL(), '/');
-  })
+  });
 });
