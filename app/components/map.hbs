@@ -8,7 +8,7 @@
     ...attributes
     {{!-- It is important that we assign src, width, and height after ...attributes, --}}
     {{!-- so that they don't get accidentlly overwritten by the invoker. --}}
-    src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/{{@lng}},{{@lat}},{{@zoom}}/{{@width}}x{{@height}}@2x?access_token={{this.token}}"
+    src={{this.src}}
     {{!-- Since we are using the @2x "retina" image, we should specify the width and height --}}
     {{!-- attributes. Otherwise, the <img> will be rendered at twice the size than we expected! --}}
     width={{@width}} height={{@height}}
