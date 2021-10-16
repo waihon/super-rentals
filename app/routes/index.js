@@ -1,5 +1,7 @@
 import Route from '@ember/routing/route';
 
+const COMMUNITY_CATEGORIES = ['Condo', 'Townhouse', 'Apartment'];
+
 export default class IndexRoute extends Route {
   // This async method is akso known as a model hook.
   // It is responsible for fetching and preparing any data that we need for our route.
@@ -14,8 +16,25 @@ export default class IndexRoute extends Route {
     // We knew the server sent the data using the JSON format,
     // so we can use the json() method to parse the response data accordingly.
     // Parsing the reponse data is also an asynchronous operation.
-    let parsed = await response.json();
+    // JSON:API format returns an array nested under the "data" key
+    let { data } = await response.json();
 
-    return parsed;
+    return data.map((model) => {
+      let { attributes } = model;
+      let type;
+
+      // The data coming from the server is missing the type property,
+      // wich previously existed on our hard-coded model object.
+      // The type property could either be "Standaline" or "Community",
+      // depending on the type of rental property, which is required by
+      // our Rental component.
+      if (COMMUNITY_CATEGORIES.includes(attributes.category)) {
+        type = 'Community';
+      } else {
+        type = 'Standalone';
+      }
+
+      return { type, ...attributes };
+    });
   }
 }
