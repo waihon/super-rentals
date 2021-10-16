@@ -89,3 +89,7 @@ Specify what it takes to deploy your app.
 ### 7. Reusable Components
 
 * `ember generate component map --with-component-class` or `ember g component map -gc` for short
+
+### 8. Working with Data
+
+* No terminal commands
