@@ -85,3 +85,7 @@ Specify what it takes to deploy your app.
 ### 6. Interactive Components
 
 * `ember generate component-class rental/image`
+
+### 7. Reusable Components
+
+* `ember generate component map --with-component-class` or `ember g component map -gc` for short
