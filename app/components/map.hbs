@@ -1,1 +1,16 @@
-{{yield}}
+{{!-- By parameterizing this component using arguments, we made a reusable --}}
+{{!-- component that can be invoked from different parts of the app and --}}
+{{!-- customized to meet the needs for those specific contexts. --}}
+<div class="map">
+  <img
+    {{!-- alt could be overwritten by the invoker since it appears before ...attributes --}}
+    alt="Map image at coordinates {{@lat}},{{@lng}}"
+    ...attributes
+    {{!-- It is important that we assign src, width, and height after ...attributes, --}}
+    {{!-- so that they don't get accidentlly overwritten by the invoker. --}}
+    src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/{{@lng}},{{@lat}},{{@zoom}}/{{@width}}x{{@height}}@2x?access_token={{this.token}}"
+    {{!-- Since we are using the @2x "retina" image, we should specify the width and height --}}
+    {{!-- attributes. Otherwise, the <img> will be rendered at twice the size than we expected! --}}
+    width={{@width}} height={{@height}}
+  >
+</div>
