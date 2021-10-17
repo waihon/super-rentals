@@ -20,7 +20,7 @@ export default class IndexRoute extends Route {
     let { data } = await response.json();
 
     return data.map((model) => {
-      let { attributes } = model;
+      let { id, attributes } = model;
       let type;
 
       // The data coming from the server is missing the type property,
@@ -34,7 +34,8 @@ export default class IndexRoute extends Route {
         type = 'Standalone';
       }
 
-      return { type, ...attributes };
+      // Return id for the rental route which has a dynamic segment
+      return { id, type, ...attributes };
     });
   }
 }
