@@ -4,7 +4,13 @@
     alt="A picture of {{@rental.title}}"
   />
   <div class="details">
-    <h3>{{@rental.title}}</h3>
+    <h3>
+      {{!-- <LinkTo> tries to use the id property from our model --}}
+      {{!-- in order to replace the dynamic segment and generate the URL --}}
+      <LinkTo @route="rental" @model={{@rental}}>
+        {{@rental.title}}
+      </LinkTo>
+    </h3>
     <div class="detail owner">
       <span>Owner:</span> {{@rental.owner}}
     </div>
