@@ -97,3 +97,7 @@ Specify what it takes to deploy your app.
 ### 9. Route Params
 
 * `ember generate component rental/detailed`
+
+### 10. Service Injection
+
+* `ember generate component share-button --with-component-class` (or `ember g component share-button -gc` for short)
