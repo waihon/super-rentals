@@ -93,3 +93,7 @@ Specify what it takes to deploy your app.
 ### 8. Working with Data
 
 * No terminal commands
+
+### 9. Route Params
+
+* `ember generate component rental/detailed`
