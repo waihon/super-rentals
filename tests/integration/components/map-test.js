@@ -16,14 +16,15 @@ module('Integration | Component | map', function (hooks) {
       @height="120"
     />`);
 
-    assert.dom('.map img')
+    assert
+      .dom('.map img')
       .exists()
       .hasAttribute('alt', 'Map image at coordinates 37.7797,-122.4184')
       .hasAttribute('src')
       .hasAttribute('width', '150')
       .hasAttribute('height', '120');
 
-    let { src } = find('.map img')
+    let { src } = find('.map img');
     let token = encodeURIComponent(ENV.MAPBOX_ACCESS_TOKEN);
 
     assert.ok(
@@ -122,8 +123,7 @@ module('Integration | Component | map', function (hooks) {
       alt="A map of San Francisco"
     />`);
 
-    assert.dom('.map img')
-      .hasAttribute('alt', 'A map of San Francisco');
+    assert.dom('.map img').hasAttribute('alt', 'A map of San Francisco');
   });
 
   test('the src, width and height attributes cannot be overriden', async function (assert) {
@@ -138,7 +138,8 @@ module('Integration | Component | map', function (hooks) {
       height="300"
     />`);
 
-    assert.dom('.map img')
+    assert
+      .dom('.map img')
       // The hasAttribute test helper from qunit-dom supports using regular expressions
       .hasAttribute('src', /^https:\/\/api\.mapbox\.com\//)
       .hasAttribute('width', '150')
