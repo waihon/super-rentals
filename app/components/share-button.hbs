@@ -1,1 +1,16 @@
-{{yield}}
+{{!-- We don't wnat to allow href, target, or rel to be overridden by --}}
+{{!-- the invoker, so we specify those attributes after ...attributes --}}
+{{!-- While all other HTML attributes follow the "last-write wins" rule, --}}
+{{!-- the values for the class attribute are merged together instead. --}}
+{{!-- It allows the component to specify whatever classes that it needs, --}}
+{{!-- while allowing the invokers of the component to freely add any extra --}}
+{{!-- classes that they need for styling purposes. --}}
+<a
+  ...attributes
+  href={{this.shareURL}}
+  target="_blank"
+  rel="external nofollow noopener noreferrer"
+  class="share button"
+>
+  {{yield}}
+</a>
