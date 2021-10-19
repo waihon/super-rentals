@@ -101,3 +101,8 @@ Specify what it takes to deploy your app.
 ### 10. Service Injection
 
 * `ember generate component share-button --with-component-class` (or `ember g component share-button -gc` for short)
+
+### 11. Ember Data
+
+* `ember generate model rental`
+* `ember generate model-test rental`
