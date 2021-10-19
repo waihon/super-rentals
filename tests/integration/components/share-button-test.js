@@ -52,7 +52,7 @@ module('Integration | Component | share-button', function (hooks) {
     assert.equal(
       this.tweetParam('url'),
       new URL('/foo/bar?baz=true#some-section', window.location.origin)
-    )
+    );
   });
 
   test('it supports passing @text', async function (assert) {
@@ -72,9 +72,7 @@ module('Integration | Component | share-button', function (hooks) {
   });
 
   test('it supports passwing @via', async function (assert) {
-    await render(
-      hbs`<ShareButton @via="emberjs">Tweet this!</ShareButton>`
-    );
+    await render(hbs`<ShareButton @via="emberjs">Tweet this!</ShareButton>`);
 
     assert.equal(this.tweetParam('via'), 'emberjs');
   });
@@ -92,7 +90,7 @@ module('Integration | Component | share-button', function (hooks) {
       .hasClass('things');
   });
 
-  test('the target, rel and href attributes cannot be overriden', async function(assert) {
+  test('the target, rel and href attributes cannot be overriden', async function (assert) {
     await render(
       hbs`<ShareButton target="_self" rel="" href="/">Not a Tweet!</ShareButton>`
     );

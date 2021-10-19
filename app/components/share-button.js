@@ -4,9 +4,9 @@ import Component from '@glimmer/component';
 const TWEET_INTENT = 'https://twitter.com/intent/tweet';
 
 export default class ShareButtonComponent extends Component {
-  // Services are scoped to the app, instead of all the 
+  // Services are scoped to the app, instead of all the
   // JavaScript code that is running on the same page.
-  // This allows us to have multiple scripts running on 
+  // This allows us to have multiple scripts running on
   // the same page without interfering with each other.
   // Besides, services are designed to be easily swappable.
   // Injects the router service into the component, making it
