@@ -157,8 +157,12 @@ module('Integration | Component | rentals', function (hooks) {
 
     assert.dom('.rentals .results').exists();
     assert.dom('.rentals .results li').exists({ count: 2 });
-    assert.dom('.rentals .results li:nth-of-type(1)').containsText('Urban Living');
-    assert.dom('.rentals .results li:nth-of-type(2)').containsText('Downtown Charm');
+    assert
+      .dom('.rentals .results li:nth-of-type(1)')
+      .containsText('Urban Living');
+    assert
+      .dom('.rentals .results li:nth-of-type(2)')
+      .containsText('Downtown Charm');
 
     await fillIn('.rentals input', 'STANDALONE');
 
