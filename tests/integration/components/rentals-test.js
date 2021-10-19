@@ -20,7 +20,7 @@ module('Integration | Component | rentals', function (hooks) {
             lng: -122.4194,
           },
           category: 'Estate',
-          type: 'Standaline',
+          type: 'Standalone',
           bedrooms: 15,
           image:
             'https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg',
@@ -122,6 +122,64 @@ module('Integration | Component | rentals', function (hooks) {
     assert.dom('.rentals .results li').containsText('Downtown Charm');
 
     await fillIn('.rentals input', 'OLD');
+
+    assert.dom('.rentals .results').exists();
+    assert.dom('.rentals .results li').exists({ count: 1 });
+    assert.dom('.rentals .results li').containsText('Grand Old Mansion');
+  });
+
+  test('it allows case-insensitive search by city', async function (assert) {
+    await render(hbs`<Rentals @rentals={{this.rentals}} />`);
+
+    assert.dom('.rentals').exists();
+    assert.dom('.rentals input').exists();
+
+    await fillIn('.rentals input', 'seattle');
+
+    assert.dom('.rentals .results').exists();
+    assert.dom('.rentals .results li').exists({ count: 1 });
+    assert.dom('.rentals .results li').containsText('Urban Living');
+
+    await fillIn('.rentals input', 'PORTLAND');
+
+    assert.dom('.rentals .results').exists();
+    assert.dom('.rentals .results li').exists({ count: 1 });
+    assert.dom('.rentals .results li').containsText('Downtown Charm');
+  });
+
+  test('it allows case-insensitive search by type', async function (assert) {
+    await render(hbs`<Rentals @rentals={{this.rentals}} />`);
+
+    assert.dom('.rentals').exists();
+    assert.dom('.rentals input').exists();
+
+    await fillIn('.rentals input', 'community');
+
+    assert.dom('.rentals .results').exists();
+    assert.dom('.rentals .results li').exists({ count: 2 });
+    assert.dom('.rentals .results li:nth-of-type(1)').containsText('Urban Living');
+    assert.dom('.rentals .results li:nth-of-type(2)').containsText('Downtown Charm');
+
+    await fillIn('.rentals input', 'STANDALONE');
+
+    assert.dom('.rentals .results').exists();
+    assert.dom('.rentals .results li').exists({ count: 1 });
+    assert.dom('.rentals .results li').containsText('Grand Old Mansion');
+  });
+
+  test('it allows search by number of bedrooms', async function (assert) {
+    await render(hbs`<Rentals @rentals={{this.rentals}} />`);
+
+    assert.dom('.rentals').exists();
+    assert.dom('.rentals input').exists();
+
+    await fillIn('.rentals input', '3');
+
+    assert.dom('.rentals .results').exists();
+    assert.dom('.rentals .results li').exists({ count: 1 });
+    assert.dom('.rentals .results li').containsText('Downtown Charm');
+
+    await fillIn('.rentals input', '15');
 
     assert.dom('.rentals .results').exists();
     assert.dom('.rentals .results li').exists({ count: 1 });
