@@ -1,1 +1,16 @@
-{{yield}}
+<div class="rentals">
+  <label>
+    <span>Where would you like to stay?</span>
+    <input class="light">
+  </label>
+
+  <ul class="results">
+    {{!-- While extracting our markup from index.hbs into a component --}}
+    {{!-- we also renamed the @model argument to be @rentals instead, --}}
+    {{!-- just in order to be a little more specific about what we're --}}
+    {{!-- iterating over in our {{#each}} loop. --}}
+    {{#each @rentals as |rental|}}
+      <li><Rental @rental={{rental}} /></li>
+    {{/each}}
+  </ul>
+</div>
