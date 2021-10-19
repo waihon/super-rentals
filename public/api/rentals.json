@@ -50,6 +50,74 @@
         "image": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Wheeldon_Apartment_Building_-_Portland_Oregon.jpg",
         "description": "Convenience is at your doorstep with this charming downtown rental. Great restaurants and active night life are within a few feet."
       }
+    },
+    {
+      "type": "rentals",
+      "id": "garden-bungalow",
+      "attributes": {
+        "title": "Gargen Bungalow",
+        "owner": "Richard Mobley",
+        "city": "Montgomery",
+        "location": {
+          "lat": 32.36681,
+          "lng": -86.29997
+        },
+        "category": "Bungalow",
+        "bedrooms": 5,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/1148_S_Lawrence_Street_Montgomery_July_2009.jpg/1024px-1148_S_Lawrence_Street_Montgomery_July_2009.jpg",
+        "description": "This beautiful bungalow with a garden offers move-in ready home for rent with flexible leasing, cleaning and maintenance services, roommate matching and more."
+      }
+    },
+    {
+      "type": "rentals",
+      "id": "wooden-cabin",
+      "attributes": {
+        "title": "Wooden Cabin",
+        "owner": "Jennifer Harris",
+        "city": "Randolph",
+        "location": {
+          "lat": 42.1626,
+          "lng": -71.04116
+        },
+        "category": "Cabin",
+        "bedrooms": 2,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/a/ae/AMC_Ponkapoag_NorthCabin.jpg",
+        "description": "This wooden cabin offers move-in ready vacation home for rent with flexible leasing, cleaning and maintenance services and more."
+      }
+    },
+    {
+      "type": "rentals",
+      "id": "green-cottage",
+      "attributes": {
+        "title": "Green Cottage",
+        "owner": "Parker Allen",
+        "city": "Mackinaw City",
+        "location": {
+          "lat": 45.777028,
+          "lng": -84.726562
+        },
+        "category": "Cottage",
+        "bedrooms": 4,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Windswept-Guy_Brown_Cottage.jpg/1280px-Windswept-Guy_Brown_Cottage.jpg",
+        "description": "This cottage with a garden offers move-in ready vacation home for rent with flexible leasing, cleaning and maintenance services and more."
+      }
+    },
+    {
+      "type": "rentals",
+      "id": "twin-homes",
+      "attributes": {
+        "title": "Twin Homes",
+        "owner": "Christine Eastwood",
+        "city": "Portland",
+        "location": {
+          "lat": 43.661471,
+          "lng": -70.2553259 
+        },
+        "category": "Row Houses",
+        "bedrooms": 8,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/John_Neal_House_Portland_Maine.jpg/1280px-John_Neal_House_Portland_Maine.jpg",
+        "description": "This twin homes offers move-in ready home for rent with flexible leasing, cleaning and maintenance services and more."
+      }
     }
   ]
 }
