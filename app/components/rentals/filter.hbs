@@ -1,1 +1,10 @@
-{{yield}}
+{{!-- This component's template doesn't render any content. --}}
+{{!-- This component's only responsibility is to set up some piece of --}}
+{{!-- state (this.results, the list of filtered rental properties), --}}
+{{!-- and then yield that state back up to its caller (<Rentals>) --}}
+{{!-- in the form of a block parameter (as |results|). --}}
+{{!-- This is called the provider component pattern, which we see --}}
+{{!-- in action with one component providing data up to its caller.--}}
+{{!-- Ember allows us to pass arbitrary data to blocks in the form --}}
+{{!-- of passing in additional arguments to the {{yield}} keyword --}}
+{{yield this.results}}
