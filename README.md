@@ -112,3 +112,8 @@ Specify what it takes to deploy your app.
 * `ember generate component rentals`
 * `ember generate component-class rentals`
 * `ember generate component rentals/filter --with-component-class` (or `ember g component rentals/filter -gc` for short)
+
+### 13. Deployment
+
+* `ember generate component footer`
+* `ember generate component-class footer`
