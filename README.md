@@ -106,3 +106,9 @@ Specify what it takes to deploy your app.
 
 * `ember generate model rental`
 * `ember generate model-test rental`
+
+### 12. Provider Components
+
+* `ember generate component rentals`
+* `ember generate component-class rentals`
+* `ember generate component rentals/filter --with-component-class` (or `ember g component rentals/filter -gc` for short)
