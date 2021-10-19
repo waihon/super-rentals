@@ -8,7 +8,6 @@ export default class IndexRoute extends Route {
   // The Ember Data store acts as a kind of intermediary between out app and the
   // server; it does many important things, including caching the resposnes taht
   // were fetched from the server.
-
   @service store;
 
   // This async method is akso known as a model hook.
